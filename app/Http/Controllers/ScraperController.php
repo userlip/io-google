@@ -57,4 +57,10 @@ class ScraperController extends Controller
             "data" => $this->handleNotParamethizedScript("GoogleMapsReviewsScraper.js")
         ]);
     }
+    public function googlenews() {
+
+        return response()->json([
+            "data" => $this->handleNotParamethizedScript("GoogleNewsScraper.js")
+        ]);
+    }
 }

@@ -28,5 +28,6 @@ Route::prefix("scraper")->group(function() {
         Route::get("googlejobs", [ScraperController::class, "googlejobs"]);
         Route::get("googlelinkedin", [ScraperController::class, "googlelinkedin"]);
         Route::get("googlemapsreviews", [ScraperController::class, "googlemapsreviews"]);
+        Route::get("googlenews", [ScraperController::class, "googlenews"]);
     });
 });
