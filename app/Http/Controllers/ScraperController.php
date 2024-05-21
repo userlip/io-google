@@ -6,14 +6,25 @@ use Illuminate\Http\Request;
 
 class ScraperController extends Controller
 {
-    public function googleauthorprofile() {
-        $script = "GoogleAuthorProfile.js";
+
+    private function handleNotParamethizedScript(String $script) {
         $path = base_path("scripts/{$script}");
         $command = "node {$path}";
         $result = shell_exec($command);
 
+        return $result;
+    }
+
+    public function googleauthorprofile() {
+
         return response()->json([
-            "data" => $result
+            "data" => $this->handleNotParamethizedScript("GoogleAuthorProfile.js")
+        ]);
+    }
+    public function googleautocomplete() {
+
+        return response()->json([
+            "data" => $this->handleNotParamethizedScript("GoogleAutocompleteScraper.js")
         ]);
     }
 }

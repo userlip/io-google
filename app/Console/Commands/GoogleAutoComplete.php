@@ -4,14 +4,14 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class GoogleAuthorProfile extends Command
+class GoogleAutoComplete extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'scrape:google-author-profile';
+    protected $signature = 'scrape:google-auto-complete';
 
     /**
      * The console command description.
@@ -25,13 +25,11 @@ class GoogleAuthorProfile extends Command
      */
     public function handle()
     {
-        $script = "GoogleAuthorProfile.js";
+        $script = "GoogleAutocompleteScraper.js";
         $path = base_path("scripts/{$script}");
         $command = "node {$path}";
         $result = shell_exec($command);
 
         $this->info($result);
-
-        // return 0;
     }
 }
