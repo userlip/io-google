@@ -27,4 +27,10 @@ class ScraperController extends Controller
             "data" => $this->handleNotParamethizedScript("GoogleAutocompleteScraper.js")
         ]);
     }
+    public function googlefinance() {
+
+        return response()->json([
+            "data" => $this->handleNotParamethizedScript("GoogleFinanceScraper.js")
+        ]);
+    }
 }
