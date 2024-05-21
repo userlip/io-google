@@ -39,4 +39,10 @@ class ScraperController extends Controller
             "data" => $this->handleNotParamethizedScript("GoogleImagesScraping2.js")
         ]);
     }
+    public function googlejobs() {
+
+        return response()->json([
+            "data" => $this->handleNotParamethizedScript("GoogleJobsScraper.js")
+        ]);
+    }
 }

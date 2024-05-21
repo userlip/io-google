@@ -25,5 +25,6 @@ Route::prefix("scraper")->group(function() {
         Route::get("googleautocomplete", [ScraperController::class, "googleautocomplete"]);
         Route::get("googlefinance", [ScraperController::class, "googlefinance"]);
         Route::get("googleimagesscraping2", [ScraperController::class, "googleimagesscraping2"]);
+        Route::get("googlejobs", [ScraperController::class, "googlejobs"]);
     });
 });
