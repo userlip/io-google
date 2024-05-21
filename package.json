@@ -17,6 +17,8 @@
     "vite": "^5.2.11"
   },
   "dependencies": {
-    "tippy.js": "^6.3.7"
+    "cheerio": "^1.0.0-rc.12",
+    "tippy.js": "^6.3.7",
+    "unirest": "^0.6.0"
   }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ScraperController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix("scraper")->group(function() {
+    Route::controller(ScraperController::class)->group(function () {
+        Route::get("googleauthorprofile", [ScraperController::class, "googleauthorprofile"]);
+    
+    });
 });
