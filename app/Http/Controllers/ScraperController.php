@@ -15,64 +15,70 @@ class ScraperController extends Controller
         return $result;
     }
 
-    public function googleauthorprofile() {
+    public function googleAuthorProfile() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleAuthorProfile.js")
         ]);
     }
-    public function googleautocomplete() {
+    public function googleAutoComplete() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleAutocompleteScraper.js")
         ]);
     }
-    public function googlefinance() {
+    public function googleFinance() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleFinanceScraper.js")
         ]);
     }
-    public function googleimagesscraping2() {
+    public function googleImagesScraping2() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleImagesScraping2.js")
         ]);
     }
-    public function googlejobs() {
+    public function googleJobs() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleJobsScraper.js")
         ]);
     }
-    public function googlelinkedin() {
+    public function googleLinkedin() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleLinkedinScraper.js")
         ]);
     }
-    public function googlemapsreviews() {
+    public function googleMapsReviews() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleMapsReviewsScraper.js")
         ]);
     }
-    public function googlenews() {
+    public function googleNews() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleNewsScraper.js")
         ]);
     }
-    public function googleplay() {
+    public function googlePlay() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GooglePlayScraper.js")
         ]);
     }
-    public function googlescholarcite() {
+    public function googleScholarCite() {
 
         return response()->json([
             "data" => $this->handleNotParamethizedScript("GoogleScholarCite.js")
+        ]);
+    }
+    public function googleScholarOrganicResults() {
+
+        return response()->json([
+            "data" => $this->handleNotParamethizedScript("GoogleScholarOrganicResults.js")
         ]);
     }
 }

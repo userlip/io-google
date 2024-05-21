@@ -21,15 +21,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix("scraper")->group(function() {
     Route::controller(ScraperController::class)->group(function () {
-        Route::get("googleauthorprofile", [ScraperController::class, "googleauthorprofile"]);
-        Route::get("googleautocomplete", [ScraperController::class, "googleautocomplete"]);
-        Route::get("googlefinance", [ScraperController::class, "googlefinance"]);
-        Route::get("googleimagesscraping2", [ScraperController::class, "googleimagesscraping2"]);
-        Route::get("googlejobs", [ScraperController::class, "googlejobs"]);
-        Route::get("googlelinkedin", [ScraperController::class, "googlelinkedin"]);
-        Route::get("googlemapsreviews", [ScraperController::class, "googlemapsreviews"]);
-        Route::get("googlenews", [ScraperController::class, "googlenews"]);
-        Route::get("googleplay", [ScraperController::class, "googleplay"]);
-        Route::get("googlescholarcite", [ScraperController::class, "googlescholarcite"]);
+        Route::get("google-author-profile", [ScraperController::class, "googleAuthorProfile"]);
+        Route::get("google-autocomplete", [ScraperController::class, "googleAutoComplete"]);
+        Route::get("google-finance", [ScraperController::class, "googleFinance"]);
+        Route::get("google-images-scraping2", [ScraperController::class, "googleImagesScraping2"]);
+        Route::get("google-jobs", [ScraperController::class, "googleJobs"]);
+        Route::get("google-linkedin", [ScraperController::class, "googleLinkedin"]);
+        Route::get("google-maps-reviews", [ScraperController::class, "googleMapsReviews"]);
+        Route::get("google-news", [ScraperController::class, "googleNews"]);
+        Route::get("google-play", [ScraperController::class, "googlePlay"]);
+        Route::get("google-scholar-cite", [ScraperController::class, "googleScholarCite"]);
+        Route::get("google-scholar-organic-results", [ScraperController::class, "googleScholarOrganicResults"]);
     });
 });
