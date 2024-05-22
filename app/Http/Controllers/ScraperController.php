@@ -15,4 +15,11 @@ class ScraperController extends Controller
 
         return $result;
     }
+
+    public function googleAuthorProfile(Request $request) {
+
+        return response()->json([
+            "data" => $this->handleParamethizedScript($request,"GoogleAuthorProfile.js"),
+        ]);
+    }
 }

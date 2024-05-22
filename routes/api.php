@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix("scraper")->group(function() {
     Route::controller(ScraperController::class)->group(function () {
+        Route::get("google-author-profile", [ScraperController::class, "googleAuthorProfile"]);
     });
 });
