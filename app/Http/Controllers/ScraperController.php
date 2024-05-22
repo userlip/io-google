@@ -22,4 +22,10 @@ class ScraperController extends Controller
             "data" => $this->handleParamethizedScript($request,"GoogleAuthorProfile.js"),
         ]);
     }
+    public function googleAutoComplete(Request $request) {
+
+        return response()->json([
+            "data" => $this->handleParamethizedScript($request,"GoogleAutocompleteScraper.js"),
+        ]);
+    }
 }
