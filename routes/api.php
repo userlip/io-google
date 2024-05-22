@@ -27,5 +27,6 @@ Route::prefix("scraper")->group(function() {
         Route::get("google-images2", [ScraperController::class, "googleImages2"]);
         Route::get("google-jobs", [ScraperController::class, "googleJobs"]);
         Route::get("google-linkedin", [ScraperController::class, "googleLinkedin"]);
+        Route::get("google-maps-reviews", [ScraperController::class, "googleMapsReviews"]);
     });
 });

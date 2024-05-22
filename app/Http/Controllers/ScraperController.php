@@ -52,4 +52,10 @@ class ScraperController extends Controller
             "data" => $this->handleParamethizedScript($request,"GoogleLinkedinScraper.js"),
         ]);
     }
+    public function googleMapsReviews(Request $request) {
+
+        return response()->json([
+            "data" => $this->handleParamethizedScript($request,"GoogleMapsReviewsScraper.js"),
+        ]);
+    }
 }
