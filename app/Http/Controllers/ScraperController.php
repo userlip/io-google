@@ -58,4 +58,16 @@ class ScraperController extends Controller
             "data" => $this->handleParamethizedScript($request,"GoogleMapsReviewsScraper.js"),
         ]);
     }
+    public function googleNews(Request $request) {
+        $path = base_path("scripts/GoogleNewsScraper.js");
+        $url = $request->has("url")? $request->query("url") :"undefined";
+        $id = $request->has("id")? $request->query("id") :"undefined";
+        $gl = $request->has("gl")? $request->query("gl") :"undefined";
+        $command = "node {$path} {$url} {$id} {$gl}";
+        $result = shell_exec($command);
+
+        return response()->json([
+            "data" => $result,
+        ]);
+    }
 }
