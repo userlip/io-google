@@ -70,4 +70,10 @@ class ScraperController extends Controller
             "data" => $result,
         ]);
     }
+    public function googlePlay(Request $request) {
+
+        return response()->json([
+            "data" => $this->handleParamethizedScript($request,"GooglePlayScraper.js"),
+        ]);
+    }
 }
