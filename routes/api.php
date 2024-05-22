@@ -30,5 +30,6 @@ Route::prefix("scraper")->group(function() {
         Route::get("google-maps-reviews", [ScraperController::class, "googleMapsReviews"]);
         Route::get("google-news", [ScraperController::class, "googleNews"]);
         Route::get("google-play", [ScraperController::class, "googlePlay"]);
+        Route::get("google-scholar-cite", [ScraperController::class, "googleScholarCite"]);
     });
 });

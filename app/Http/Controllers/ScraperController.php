@@ -76,4 +76,10 @@ class ScraperController extends Controller
             "data" => $this->handleParamethizedScript($request,"GooglePlayScraper.js"),
         ]);
     }
+    public function googleScholarCite(Request $request) {
+
+        return response()->json([
+            "data" => $this->handleParamethizedScript($request,"GoogleScholarCite.js"),
+        ]);
+    }
 }
