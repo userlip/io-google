@@ -23,5 +23,6 @@ Route::prefix("scraper")->group(function() {
     Route::controller(ScraperController::class)->group(function () {
         Route::get("google-author-profile", [ScraperController::class, "googleAuthorProfile"]);
         Route::get("google-auto-complete", [ScraperController::class, "googleAutoComplete"]);
+        Route::get("google-finance", [ScraperController::class, "googleFinance"]);
     });
 });
